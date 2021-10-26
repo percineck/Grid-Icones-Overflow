@@ -1,0 +1,93 @@
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+}
+
+.container {
+    padding-top: var(--main-padding);
+    display: grid;
+    height: 500px;
+    grid-template-columns: 150px 150px 150px 150px 150px 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px 150px;
+    grid-template-areas: "sidebar content1 content2 content3 content4 content5 content6 content7""content8 content9 content10 content11 content12 content13 content14 content15""content16 content17 content18 content19 content20 content21 content22 content23";
+    grid-gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#sidebar,
+#content1,
+#content2,
+#content3,
+#content4,
+#content5,
+#content6,
+#content7,
+#content8,
+#content9,
+#content10,
+#content11,
+#content12,
+#content13,
+#content14,
+#content15,
+#content16,
+#content17,
+#content18,
+#content19,
+#content20,
+#content21,
+#content22,
+#content23 {
+    background-color: #eeeeee;
+    grid-area: content16, content17, content18, content19, content20, content21, content22, content23;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+@media only screen and (max-width: 800px) {
+    div .container {
+        padding-top: var(--main-padding);
+        display: grid;
+        height: 10px;
+        width: 100px;
+        grid-gap: 10px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+}
+
+.newsCard {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.newsCard:hover {
+    cursor: pointer;
+    transition: 0.2s;
+    color: #01913a;
+}
+
+.newsCardTxt {
+    display: block;
+    width: 90px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.newsCardTxt p {
+    text-indent: 5%;
+    text-align: center;
+    font-size: 15px;
+    font-family: Panton-Bold;
+    line-height: 1;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+}
